@@ -1,29 +1,37 @@
 // @flow
 import React, { Component } from 'react';
-import { View, Image, Text } from 'react-native';
+import {
+    View,
+    Image,
+    Text,
+    StyleSheet,
+    StatusBar
+} from 'react-native';
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheContatos = require('../img/detalhe_servico.png');
+const detalheContatos = require('../img/detalhe_contato.png');
 
 export default class CenaContatos extends Component {
     render() {
         return (
-            <StatusBar
-                backgroundColor='#CCC'
-            />
+            <View>
+                <StatusBar
+                    backgroundColor='#CCC'
+                />
 
-            <BarraNavegacao voltar navigator={this.props.navigator} />
+                <BarraNavegacao voltar navigator={this.props.navigator} />
 
-            <View style={styles.cabecalho}>
-                <Image source={detalheContatos} />
-                <Text style={style.txtTitulo}>Contatos</Text>
-            </View>
+                <View style={styles.cabecalho}>
+                    <Image source={detalheContatos} />
+                    <Text style={styles.txtTitulo}>Contatos</Text>
+                </View>
 
-            <View style={styles.detalhesContatos}>
-                <Text style={styles.txtContatos}>TEL: (11) 1234-1234</Text>
-                <Text style={styles.txtContatos}>CEL: (11) 91234-1234</Text>
-                <Text style={styles.txtContatos}>EMAIL: contato@atmconsultoria.com</Text>
+                <View style={styles.detalhesContatos}>
+                    <Text style={styles.txtContatos}>TEL: (11) 1234-1234</Text>
+                    <Text style={styles.txtContatos}>CEL: (11) 91234-1234</Text>
+                    <Text style={styles.txtContatos}>EMAIL: contato@atmconsultoria.com</Text>
+                </View>
             </View>
         );
     }
