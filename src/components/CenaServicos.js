@@ -10,27 +10,27 @@ import {
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheContatos = require('../img/detalhe_contato.png');
+const detalheServicos = require('../img/detalhe_servico.png');
 
-export default class CenaContatos extends Component {
+export default class CenaServicos extends Component {
     render() {
         return (
             <View>
                 <StatusBar
-                    backgroundColor='#61BD8C'
+                    backgroundColor='#19D1C8'
                 />
 
                 <BarraNavegacao voltar navigator={this.props.navigator} />
-                
+
                 <View style={styles.cabecalho}>
-                    <Image source={detalheContatos} />
-                    <Text style={styles.txtTitulo}>Contatos</Text>
+                    <Image source={detalheServicos} />
+                    <Text style={styles.txtTitulo}>Nossos Serviços</Text>
                 </View>
 
-                <View style={styles.detalhesContatos}>
-                    <Text style={styles.txtContatos}>TEL: (11) 1234-1234</Text>
-                    <Text style={styles.txtContatos}>CEL: (11) 91234-1234</Text>
-                    <Text style={styles.txtContatos}>EMAIL: contato@atmconsultoria.com</Text>
+                <View style={styles.detalhesServicos}>
+                    <Text style={styles.txtServico}>- Consultoria</Text>
+                    <Text style={styles.txtServico}>- Processos</Text>
+                    <Text style={styles.txtServico}>- Acompanhamento de Projetos</Text>
                 </View>
             </View>
         );
@@ -45,15 +45,16 @@ const styles = StyleSheet.create({
     },
     txtTitulo: {
         fontSize: 30,
-        color: '#61BD8C',
+        color: '#19D1C8',
         marginLeft: 10,
         marginTop: 25
     },
-    detalheContatos: {
+    detalhesServicos: {
         marginTop: 20,
         padding: 20
     },
-    txtContatos: {
-        fontSize: 18
+    txtServico: {
+        fontSize: 18,
+        marginHorizontal: 15
     }
 });

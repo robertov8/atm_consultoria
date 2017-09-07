@@ -10,27 +10,27 @@ import {
 
 import BarraNavegacao from './BarraNavegacao';
 
-const detalheContatos = require('../img/detalhe_contato.png');
+const detalheEmpresa = require('../img/detalhe_empresa.png');
 
-export default class CenaContatos extends Component {
+export default class CenaEmpresa extends Component {
     render() {
         return (
             <View>
                 <StatusBar
-                    backgroundColor='#61BD8C'
+                    backgroundColor='#EC7148'
                 />
 
                 <BarraNavegacao voltar navigator={this.props.navigator} />
-                
+
                 <View style={styles.cabecalho}>
-                    <Image source={detalheContatos} />
-                    <Text style={styles.txtTitulo}>Contatos</Text>
+                    <Image source={detalheEmpresa} />
+                    <Text style={styles.txtTitulo}>A Empresa</Text>
                 </View>
 
-                <View style={styles.detalhesContatos}>
-                    <Text style={styles.txtContatos}>TEL: (11) 1234-1234</Text>
-                    <Text style={styles.txtContatos}>CEL: (11) 91234-1234</Text>
-                    <Text style={styles.txtContatos}>EMAIL: contato@atmconsultoria.com</Text>
+                <View style={styles.detalhesEmpresa}>
+                    <Text style={styles.txtEmpresa}>
+                        Lorem ipsum dolorem sit amet, dolorem sit amet ipsum dolorem sit
+                    </Text>
                 </View>
             </View>
         );
@@ -45,15 +45,16 @@ const styles = StyleSheet.create({
     },
     txtTitulo: {
         fontSize: 30,
-        color: '#61BD8C',
+        color: '#EC7148',
         marginLeft: 10,
         marginTop: 25
     },
-    detalheContatos: {
+    detalhesEmpresa: {
         marginTop: 20,
         padding: 20
     },
-    txtContatos: {
-        fontSize: 18
+    txtEmpresa: {
+        fontSize: 18,
+        marginHorizontal: 15
     }
 });

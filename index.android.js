@@ -10,7 +10,9 @@ import { Navigator } from 'react-native-deprecated-custom-components';
 
 import CenaPrincipal from './src/components/CenaPrincipal';
 import CenaClientes from './src/components/CenaClientes';
-import CenaContatos from './src/components/CenaContatos.js';
+import CenaContatos from './src/components/CenaContatos';
+import CenaEmpresa from './src/components/CenaEmpresa';
+import CenaServicos from './src/components/CenaServicos';
 
 export default class atm_consultoria extends Component {
   render() {
@@ -18,14 +20,25 @@ export default class atm_consultoria extends Component {
         <Navigator
             initialRoute={{id: 'principal'}}
             renderScene={(route, navigator) => {
-                if (route.id === 'principal') {
-                    return (<CenaPrincipal navigator={navigator} />);
-                }
-                if (route.id === 'cliente') {
-                    return (<CenaClientes navigator={navigator} />);
-                }
-                if (route.id === 'contato') {
-                    return (<CenaContatos navigator={navigator} />);
+                switch (route.id) {
+                    case 'principal':
+                        return (<CenaPrincipal navigator={navigator} />);
+                        break;
+                    case 'cliente':
+                        return (<CenaClientes navigator={navigator} />);
+                        break;
+                    case 'contato':
+                        return (<CenaContatos navigator={navigator} />);
+                        break;
+                    case 'empresa':
+                        return (<CenaEmpresa navigator={navigator} />);
+                        break;
+                    case 'servicos':
+                        return (<CenaServicos navigator={navigator} />);
+                        break;
+
+                    default:
+                        return false;
                 }
             }}
         />
