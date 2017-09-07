@@ -5,14 +5,18 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, View } from 'react-native';
+import { AppRegistry, View, Navigator } from 'react-native';
 
+import CenaPrincipal from './src/components/CenaPrincipal';
 import CenaClientes from './src/components/CenaClientes';
 
 export default class atm_consultoria extends Component {
   render() {
     return (
-        <CenaClientes />
+        <Navigator
+            initialRoute={}
+            renderScene={(route, navigator) => {}}
+        />
     );
   }
 }
