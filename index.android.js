@@ -9,7 +9,8 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 
 import BarraNavecao from './src/components/BarraNavegacao';
@@ -18,6 +19,9 @@ export default class atm_consultoria extends Component {
   render() {
     return (
         <View>
+            <StatusBar
+                backgroundColor='#CCC'
+            />
             <BarraNavecao />
         </View>
     );
