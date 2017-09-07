@@ -5,26 +5,14 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  StatusBar
-} from 'react-native';
+import { AppRegistry, View } from 'react-native';
 
-import BarraNavecao from './src/components/BarraNavegacao';
+import CenaPrincipal from './src/components/CenaPrincipal';
 
 export default class atm_consultoria extends Component {
   render() {
     return (
-        <View>
-            <StatusBar
-                backgroundColor='#CCC'
-            />
-            
-            <BarraNavecao />
-        </View>
+        <CenaPrincipal />
     );
   }
 }
