@@ -7,12 +7,12 @@
 import React, { Component } from 'react';
 import { AppRegistry, View } from 'react-native';
 
-import CenaPrincipal from './src/components/CenaPrincipal';
+import CenaClientes from './src/components/CenaClientes';
 
 export default class atm_consultoria extends Component {
   render() {
     return (
-        <CenaPrincipal />
+        <CenaClientes />
     );
   }
 }
