@@ -22,6 +22,7 @@ export default class atm_consultoria extends Component {
             <StatusBar
                 backgroundColor='#CCC'
             />
+            
             <BarraNavecao />
         </View>
     );
