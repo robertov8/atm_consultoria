@@ -5,7 +5,8 @@
  */
 
 import React, { Component } from 'react';
-import { AppRegistry, View, Navigator } from 'react-native';
+import { AppRegistry, View } from 'react-native';
+import { Navigator } from 'react-native-deprecated-custom-components';
 
 import CenaPrincipal from './src/components/CenaPrincipal';
 import CenaClientes from './src/components/CenaClientes';
@@ -14,8 +15,15 @@ export default class atm_consultoria extends Component {
   render() {
     return (
         <Navigator
-            initialRoute={}
-            renderScene={(route, navigator) => {}}
+            initialRoute={{id: 'a'}}
+            renderScene={(route, navigator) => {
+                if (route.id === 'a') {
+                    return (<CenaPrincipal />);
+                }
+                if (route.id === 'b') {
+                    return (<CenaClientes />);
+                }
+            }}
         />
     );
   }
